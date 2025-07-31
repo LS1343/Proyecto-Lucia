@@ -1,252 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Proyecto Selena Quintanilla</title>
-        <link rel="stylesheet" href="ProyectoEstilo.css">
-    </head>
-    <body>
-        <header>
-            <div class="Menú"></div>
-        <nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selena Quintanilla - Fanpage</title>
+  <style>
+    :root {
+      --Eris: #300125;
+      --Raspberry: #55254b;
+      --Pink: #73042d;
+      --Peach: #a4688a;
+      --Lavender: #b8a0c7;
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(https://i0.wp.com/hotbook.mx/wp-content/uploads/2019/04/hotbook_selenaquintanilla_fact2.jpg?w=1000&ssl=1);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .nombre {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--Lavender);
+    }
+
+    header {
+      background-color: var(--Eris);
+      width: 100%;
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    nav {
+      float: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin-left: 150px;
+      padding: 12px 0;
+      float: left;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f38dc7;
+      font-weight: lighter;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      color: #d3bfd0;
+    }
+
+    .Felipe {
+      height: 100vh;
+      background: url('https://i.imgur.com/nOY8u3b.jpg') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fefdff;
+    }
+
+    .Gatos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .Felipe h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .boton {
+      border: 2px solid #fefdff;
+      padding: 10px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background-color: #fefdff;
+      color: var(--Pink);
+    }
+
+    /* Secciones del segundo código */
+    main {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    main section {
+      display: none;
+      margin-bottom: 50px;
+    }
+
+    main section h1, main section h2 {
+      color: var(--Pink);
+      margin-bottom: 10px;
+    }
+
+    main section p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: #300125;
+    }
+
+    .indice-letras a {
+      text-decoration: none;
+      color: var(--Pink);
+      margin: 0 3px;
+    }
+
+    .indice-letras a:hover {
+      color: var(--Lavender);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="Separador">
+      <section class="nombre">Selena Quintanilla</section>
+      <div class="Menú"></div>
+      <nav>
+        <ul>
+          <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+          <li><a onclick="mostrarSeccion('biografia')">Biografía</a></li>
+          <li><a onclick="mostrarSeccion('canciones')">Canciones</a></li>
+          <li><a onclick="mostrarSeccion('vestuarios')">Vestuarios</a></li>
+          <li><a onclick="mostrarSeccion('referencias')">Referencias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="Felipe">
+    <div class="Gatos"></div>
+    <div class="hero-content">
+      <h1>La reina de la música tejana</h1>
+      <div class="boton" onclick="mostrarSeccion('inicio')">Conoce más de ella</div>
+    </div>
+  </section>
+  <main>
+    <section id="inicio">
+      <h1>Proyecto sobre Selena Quintanilla</h1>
+      <p>Bienvenido al proyecto dedicado a la vida y legado de Selena Quintanilla, la Reina del Tex-Mex. Conoceremos parte de su vida y de su trayectoria musical. Así como, su impacto en la cultura latina y la moda, esperamos que te la pases bien.</p>
+    </section>
+
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <p>Selena Quintanilla Pérez nació el 16 de abril de 1971 en Lake Jackson, Texas. Selena comenzó a cantar a una edad muy temprana y, alrededor de los 10 años se convirtió en la cantante principal de la banda de su familia, Selena y Los Dinos. El grupo musical comenzó a tocando en bodas y clubes de Texas. Su padre Abraham Quintanilla fue el que dirigió y produjo el grupo de su familia con la ayuda de su hijo y, hermano de selena Abraham Isaac Qunitanilla III, también conocido como "A.B" Quintanilla, que se dedicaba a tocar el bajo eléctrico y la guitarra, Por otro lado, su hermana, Suzette Quintanilla tocaba la batería, su estilo de música tejana incorporó música mexicana,country y western. En 1987 recibió el premio a mejor Vocalista Femenina en los tejano Music Awards, y firmó un contarto de grabación con EMI pocos años mas tarde. su fama siguió creciendo a principios de 1990, especialmente en los países hispanos. Su álbum "Selena Live" ganó el premio Grammy al mejor álbum de música México-Estadounidense en 1993 y su álbum "Amor Prohibido" fue nominado para una premio Grammy al año siguiente. Esposa del guitarrista Chris Pérez, fue asesinada con un disparo por la espalda a los 23 años por Yolanda Saldívar, presidenta del club de fans, quien la citó en la habitación 158 del motel Days Inn, en corpus christi, el 31 de marzo de 1995. Posterior a su muerte, su vida fue llevada al cine en 1997, con la película de nombre Selena protagonizada por Jennifeer López. En ese mismo año, el 25 de mayo, se inauguró el mirador de la flor, una estatua de bronce en honor a la cantante. En 1998 se inaugura un museo en su memoria. El museo y la estatua son visitados cada semana por cientos de fans.</p>
+    </section>
+
+    <section id="canciones">
+      <h2>Canciones</h2>
+      <p>Explora las canciones más famosas de Selena, organizadas por letra inicial.</p>
+      <div class="indice-letras">
+        <strong>Ir a canciones por letra:</strong>
+        <a href="#canciones-a">A</a> |
+        <a href="#canciones-b">B</a> |
+        <a href="#canciones-c">C</a> |
+        <a href="#canciones-d">D</a> |
+        <a href="#canciones-e">E</a> |
+        <a href="#canciones-f">F</a> |
+        <a href="#canciones-g">G</a> |
+        <a href="#canciones-h">H</a> |
+        <a href="#canciones-i">I</a> |
+        <a href="#canciones-j">J</a> |
+        <a href="#canciones-k">K</a> |
+        <a href="#canciones-l">L</a> |
+        <a href="#canciones-m">M</a> |
+        <a href="#canciones-n">N</a> |
+        <a href="#canciones-o">O</a> |
+        <a href="#canciones-p">P</a> |
+        <a href="#canciones-q">Q</a> |
+        <a href="#canciones-r">R</a> |
+        <a href="#canciones-s">S</a> |
+        <a href="#canciones-t">T</a> |
+        <a href="#canciones-u">U</a> |
+        <a href="#canciones-v">V</a> |
+        <a href="#canciones-w">W</a> |
+        <a href="#canciones-x">X</a> |
+        <a href="#canciones-y">Y</a> |
+        <a href="#canciones-z">Z</a>
+      </div>
+      <ul>
+        <li id="canciones-a"><strong>A</strong>
+          <ul>
+            <li>Amor Prohibido</li>
+            <li>Como la Flor</li>
+            <li>La Carcacha</li>
+          </ul>
+        </li>
+        <li id="canciones-b"><strong>B</strong>
+          <ul>
+            <li>Baila Esta Cumbia</li>
+            <li>Bidi Bidi Bom Bom</li>
+          </ul>
+        </li>
+        <li id="canciones-c"><strong>C</strong>
+          <ul>
+            <li>Como Te Quiero Yo</li>
+            <li>Cuando la Quise Olvidar</li>
+          </ul>
+        </li>
+        <li id="canciones-d"><strong>D</strong>
+          <ul>
+            <li>Donde Quiera Que Estés</li>
+            <li>Déjala Que Vuelva</li>
+          </ul>
+        </li>
+        <li id="canciones-e"><strong>E</strong>
+          <ul>
+            <li>Enamorada de Ti</li>
+            <li>El Chico del Apartamento 512</li>
+          </ul>
+        </li>
+        <li id="canciones-f"><strong>F</strong>
             <ul>
-            <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
-            <li><a href="#biografia" onclick="mostrarSeccion('biografia')">Biografía</a></li>
-            <li><a href="#canciones" onclick="mostrarSeccion('canciones')">Canciones</a></li>
-            <li><a href="#vestuarios" onclick="mostrarSeccion('vestuarios')">Vestuarios</a></li>
-            <li><a href="#referencias" onclick="mostrarSeccion('referencias')">Referencias</a></li>
+                <li>Fotos y Recuerdos</li>
+                <li>Falta Una Semana</li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="inicio">
-            <h1>Proyecto sobre Selena Quintanilla</h1>
-            <p>Bienvenido al proyecto dedicado a la vida y legado de Selena Quintanilla, la Reina del Tex-Mex.</p>
-        </section>
-
-        <section id="biografia">
-            <h2>Biografía</h2>
-            <p>Selena Quintanilla Perez, nacio el 16 de abril de 1971 en Lake Jackson, Texas. Desde joven joven tuvo un gran interés por la música y comenzó a cantar en la iglesia. A lo largo de su carrera, se convirtió en una de las artistas más influyentes en la música latina.</p>
-        </section>
-
-        <section id="canciones">
-            <h2>Canciones</h2>
-            <p>En la siguiente lista te mostramos todas las canciones de Selena, desde sus éxitos musicales hasta las menos conocidas.</p>
-            <div class="indice-letras">
-                <strong>Ir a canciones por letra:</strong>
-                <a href="#canciones-a">A</a> |
-                <a href="#canciones-b">B</a> |
-                <a href="#canciones-c">C</a> |
-                <a href="#canciones-d">D</a> |
-                <a href="#canciones-e">E</a> |
-                <a href="#canciones-f">F</a> |
-                <a href="#canciones-g">G</a> |
-                <a href="#canciones-h">H</a> |
-                <a href="#canciones-i">I</a> |
-                <a href="#canciones-j">J</a> |
-                <a href="#canciones-k">K</a> |
-                <a href="#canciones-l">L</a> |
-                <a href="#canciones-m">M</a> |
-                <a href="#canciones-n">N</a> |
-                <a href="#canciones-o">O</a> |
-                <a href="#canciones-p">P</a> |
-                <a href="#canciones-q">Q</a> |
-                <a href="#canciones-r">R</a> |
-                <a href="#canciones-s">S</a> |
-                <a href="#canciones-t">T</a> |
-                <a href="#canciones-u">U</a> |
-                <a href="#canciones-v">V</a> |
-                <a href="#canciones-w">W</a> |
-                <a href="#canciones-x">X</a> |
-                <a href="#canciones-y">Y</a> |
-                <a href="#canciones-z">Z</a>
-            </div>
+        </li>
+        <li id="canciones-g"><strong>G</strong>
             <ul>
-                <li id="canciones-a"><strong>A</strong>
-                    <ul>
-                        <li>Amor Prohibido</li>
-                        <li>Como la Flor</li>
-                        <li>La Carcacha</li>
-                    </ul>
-                </li>
-                <li id="canciones-b"><strong>B</strong>
-                    <ul>
-                        <li>Baila Esta Cumbia</li>
-                        <li>Bidi Bidi Bom Bom</li>
-                    </ul>
-                </li>
-                <li id="canciones-c"><strong>C</strong>
-                    <ul>
-                        <li>Como Te Quiero Yo a Ti</li>
-                        <li>Cuando la Quiero</li>
-                    </ul>
-                </li>
-                <li id="canciones-d"><strong>D</strong>
-                    <ul>
-                        <li>Donde Quiera Que Estés</li>
-                        <li>Disco Medley</li>
-                    </ul>
-                </li>
-                <li id="canciones-e"><strong>E</strong>
-                    <ul>
-                        <li>Enamorada de Ti</li>
-                        <li>El Chico del Apartamento 512</li>
-                    </ul>
-                </li>
-                <li id="canciones-f"><strong>F</strong>
-                    <ul>
-                        <li>Fotos y Recuerdos</li>
-                        <li>Feliz Cumpleaños</li>
-                    </ul>
-                </li>
-                <li id="canciones-g"><strong>G</strong>
-                    <ul>
-                        <li>Goodbye to Yesterday</li>
-                        <li>Guadalupe</li>
-                    </ul>
-                </li>
-                <li id="canciones-h"><strong>H</strong>
-                    <ul>
-                        <li>Hoy</li>
-                        <li>Hasta la Raíz</li>
-                    </ul>
-                </li>
-                <li id="canciones-i"><strong>I</strong>
-                    <ul>
-                        <li>Is It the Beat?</li>
-                        <li>Inolvidable</li>
-                    </ul>
-                </li>
-                <li id="canciones-j"><strong>J</strong>
-                    <ul>
-                        <li>Juana la Cubana</li>
-                        <li>Jamás</li>
-                    </ul>
-                </li>
-                <li id="canciones-k"><strong>K</strong>
-                    <ul>
-                        <li>Que Creías</li>
-                        <li>Qué Bonito</li>
-                    </ul>
-                </li>
-                <li id="canciones-l"><strong>L</strong>
-                    <ul>
-                        <li>La Llamada</li>
-                        <li>La Puerta de la Vida</li>
-                    </ul>
-                </li>
-                <li id="canciones-m"><strong>M</strong>
-                    <ul>
-                        <li>Mi Tierra</li>
-                        <li>Mi Vida Loca</li>
-                    </ul>
-                </li>
-                <li id="canciones-n"><strong>N</strong>
-                    <ul>
-                        <li>No Me Queda Más</li>
-                        <li>No Quiero Saber</li>
-                    </ul>
-                </li>
-                <li id="canciones-o"><strong>O</strong>
-                    <ul>
-                        <li>Oye Mi Amor</li>
-                        <li>Olvídame y Pega la Vuelta</li>
-                    </ul>
-                </li>
-                <li id="canciones-p"><strong>P</strong>
-                    <ul>
-                        <li>Por Siempre Selena</li>
-                        <li>Preciosa</li>
-                    </ul>
-                </li>
-                <li id="canciones-q"><strong>Q</strong>
-                    <ul>
-                        <li>Que Me Entierren con la Banda</li>
-                        <li>Quiero Verte Ya</li>
-                    </ul>
-                </li>
-                <li id="canciones-r"><strong>R</strong>
-                    <ul>
-                        <li>Ritmo de la Noche</li>
-                        <li>Reina de Corazones</li>
-                    </ul>
-                </li>
-                <li id="canciones-s"><strong>S</strong>
-                    <ul>
-                        <li>Si Una Vez</li>
-                        <li>Siempre Selena</li>
-                    </ul>
-                </li>
-                <li id="canciones-t"><strong>T</strong>
-                    <ul>
-                        <li>Te Amo</li>
-                        <li>Todo Me Gusta de Ti</li>
-                    </ul>
-                </li>
-                <li id="canciones-u"><strong>U</strong>
-                    <ul>
-                        <li>Una Noche Más</li>
-                        <li>Un Día Más</li>
-                    </ul>
-                </li>
-                <li id="canciones-v"><strong>V</strong>
-                    <ul>
-                        <li>Ven a Mi</li>
-                        <li>Viviré</li>
-                    </ul>
-                </li>
-                <li id="canciones-w"><strong>W</strong>
-                    <ul>
-                        <li>Wishing on a Star</li>
-                        <li>We Belong Together</li>
-                    </ul>
-                </li>
-                <li id="canciones-x"><strong>X</strong>
-                    <ul>
-                        <li>Ya No Me Queda Más</li>
-                        <li>Y Si Una Vez</li>
-                    </ul>
-                </li>
-                <li id="canciones-y"><strong>Y</strong>
-                    <ul>
-                        <li>Yo Te Amo</li>
-                        <li>Y Volveré</li>
-                    </ul>
-                </li>
-                <li id="canciones-z"><strong>Z</strong>
-                    <ul>
-                        <li>Zapatos Viejos</li>
-                        <li>Ya No Hay Más</li>
-                    </ul>
-                </li>
+                <li>Guadalupe</li>
+                <li>Gente Que No</li>
             </ul>
-        </section>
+        </li>
+        <li id="canciones-h"><strong>H</strong>
+            <ul>
+                <li>Hoy</li>
+                <li>Hasta la Raíz</li>
+            </ul>
+        </li>
+        <li id="canciones-i"><strong>I</strong>
+      </ul>
+        <ul>
+          <li>Isabel</li>
+          <li>Inolvidable</li>
+        </ul>
+        </li>
+        <li id="canciones-j"><strong>J</strong>
+          <ul>
+            <li>Ya No Me Queda Más</li>
+            <li>Yo Te Amo</li>
+          </ul>
+        </li>
+        <li id="canciones-k"><strong>K</strong>
+          <ul>
+            <li>Kiss Me</li>
+          </ul>
+        </li>
+        <li id="canciones-l"><strong>L</strong>
+          <ul>
+            <li>La Llamada</li>
+            <li>La Puerta de la Vida</li>
+          </ul>
+        </li>
+        <li id="canciones-m"><strong>M</strong>
+          <ul>
+            <li>Muy Dentro de Mi Corazón</li>
+            <li>Mi Tierra</li>
+          </ul>
+        </li>
+        <li id="canciones-n"><strong>N</strong>
+          <ul>
+            <li>No Me Queda Más</li>
+            <li>No Debes Jugar</li>
+          </ul>
+        </li>
+        <li id="canciones-o"><strong>O</strong>
+          <ul>
+            <li>Oye Mi Amor</li>
+            <li>Olvídame y Pega la Vuelta</li>
+          </ul>
+        </li>
+        <li id="canciones-p"><strong>P</strong>
+          <ul>
+            <li>Píntame de Colores</li>
+            <li>Puedes Contar Conmigo</li>
+          </ul>
+        </li>
+        <li id="canciones-q"><strong>Q</strong>
+          <ul>
+            <li>Que Creías</li>
+            <li>Quiero Verte Ya</li>
+          </ul>
+        </li>
+        <li id="canciones-r"><strong>R</strong>
+            <ul>
+                <li>Ritmo de la Noche</li>
+                <li>Reina de Corazones</li>
+            </ul>
+        </li>
+        <li id="canciones-s"><strong>S</strong>
+            <ul>
+                <li>Si Una Vez</li>
+                <li>Sueño Contigo</li>
+                <li>Siempre Hace Frío</li>
+            </ul>
+        </li>
+        <li id="canciones-t"><strong>T</strong>
+            <ul>
+                <li>Tú Eres Mi Amor</li>
+                <li>Te Amo</li>
+            </ul>
+        </li>
+        <li id="canciones-u"><strong>U</strong>
+            <ul>
+                <li>Una Vez Más</li>
+                <li>Un Amor Eterno</li>
+            </ul>
+        </li>
+        <li id="canciones-v"><strong>V</strong>
+          <ul>
+            <li>Ven a Mi</li>
+            <li>Viviré</li>
+          </ul>
+        </li>
+        <li id="canciones-w"><strong>W</strong>
+            <ul>
+                <li>Wishing on a Star</li>
+            </ul>
+        </li>
+        <li id="canciones-x"><strong>X</strong>
+            <ul>
+                <li>Xochitl</li>
+            </ul>
+        </li>
+        <li id="canciones-y"><strong>Y</strong>
+            <ul>
+                <li>Ya No Hay Más</li>
+                <li>Yo Soy</li>
+            </ul>
+        </li>
+        <li id="canciones-z"><strong>Z</strong>
+            <ul>
+                <li>No hay canciones con la Z</li>
+            </ul>
+    </section>
 
-        <section id="vestuarios">
-            <h2>Vestuarios</h2>
-            <p>A lo largo de la carrera de Selena, sus vestuarios se convirtieron en una parte icónica de su imagen, desde trajes tradicionales hasta atuendos más modernos.</p>
-        </section>
+    <section id="vestuarios">
+      <h2>Vestuarios</h2>
+      <p>A lo largo de la carrera de Selena, sus vestuarios se convirtieron en parte icónica de su imagen, desde trajes tradicionales hasta atuendos modernos. Como ícono de la moda, Selena orgullosamente celebraba su herencia méxico-estadounidense en lugar de conformarse con los estándares eurocéntricos de belleza. Pocas celebridades latinas abrieron tanto camino en la cultura popular estadounidense en los noventa, y aquellos que lo hicieron a menudo tuvieron que lidiar con las crueldades del racismo. La imagen de Selena reflejaba las elecciones de vestimenta de las comunidades méxico-estadounidenses de clase trabajadora de Texas, al mismo tiempo que mostraba la influencia de sus ídolos pop, como Janet Jackson, Madonna, y Whitney Houston. Incluso, cuando estaba buscando estilos sofisticados, lo hacía con bajo presupuesto. Tal como sus iconicos Bustier, en donde consistían unicamente en ser brasieres con pedrería, y en donde desafiaba los valores conservadores de su familia y, claro, también de la época. A veces optaba por aparecer en el escenario con jeans ajustados, negros, de tiro alto y algunas veces hasta deslavados. Selena tomó cada referencia ranchera y le puso un toque de glamur como la chaqueta de motociclista con tachones que ahora se encuentra en el Museo Nacional Smithsonian de Historia Estadounidense. No hay que olvidar sus trajes mas iconicos, como el traje con estampado de vaca, que utilizo en San Antonio en 1991,Para crear las manchas del traje usó lentejuelas negras que están disponibles en cualquier tienda de manualidades, o uno más sofisticado como su jumpsuit morado que utilizó en su última presentación en Astrodome de Houston, Texas.</p>
+    </section>
 
-        <section id="referencias">
-            <h2>Referencias</h2>
-            <p>Libros, artículos y enlaces relacionados con su vida...</p>
-        </section>
-    </main>
+    <section id="referencias">
+      <h2>Referencias</h2>
+      <p>CMTV. (2022, 11 de octubre). Selena. CMTV. https://www.cmtv.com.ar/biografia/show.php?bnid=1944&banda=Selena
+        Manning, K. y Caruso, C. (2014, 3 de abril). Selena Quintanilla. Biografía. https://www.biography.com/musicians/selena
+        (Sin fecha). Texasmonthly.com. Consultado el 31 de julio de 2025 en https://www.texasmonthly.com/arts-entertainment/espanol-selena-moda/</p>
+    </section>
+  </main>
 
-    <script>
-        function mostrarSeccion(id) {
-            const secciones = document.querySelectorAll('main section');
-            secciones.forEach(seccion => {
-                seccion.style.display = 'none';
-            });
-            document.getElementById(id).style.display = 'block';
-        }
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('main section');
+      secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+      // Opcional: desplazar hacia el contenido
+      window.scrollTo({ top: document.querySelector('main').offsetTop, behavior: 'smooth' });
+    }
 
-        // Mostrar la primera sección al cargar
-        document.addEventListener('DOMContentLoaded', function () {
-            mostrarSeccion('inicio');
-        });
-    </script>
+    document.addEventListener('DOMContentLoaded', function () {
+      mostrarSeccion('inicio');
+    });
+  </script>
 </body>
 </html>
